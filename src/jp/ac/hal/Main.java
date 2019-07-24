@@ -34,3 +34,21 @@ class Square extends Figure{
 		System.out.println("四角の外周:"+ (2 * (side * height)));
 	}
 }
+
+//抽象クラスのサブクラス
+class Circle extends Figure{
+	final double pi = 3.14;
+	double radius;
+
+	Circle(double r){//コンストラクタ
+		radius = r;
+	}
+
+	void area() { //抽象メソッドのオーバーライド
+		System.out,println("円の面積:" + (radius * radius * pi));
+	}
+
+	void around() { //抽象メソッドのオーバーライド
+		System.out,println("円の外周:" + (2 * radius * pi));
+	}
+}
