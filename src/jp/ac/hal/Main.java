@@ -45,10 +45,21 @@ class Circle extends Figure{
 	}
 
 	void area() { //抽象メソッドのオーバーライド
-		System.out,println("円の面積:" + (radius * radius * pi));
+		System.out.println("円の面積:" + (radius * radius * pi));
 	}
 
 	void around() { //抽象メソッドのオーバーライド
-		System.out,println("円の外周:" + (2 * radius * pi));
+		System.out.println("円の外周:" + (2 * radius * pi));
+	}
+}
+
+class SizeFigure{
+	public static void main(String[] args) {
+		Figure fig1 = new Square(2.5);
+		Figure fig2 = new Square(2.3, 3.7);
+		Figure fig3 = new Circle(3.6);
+		fig1.measure();
+		fig2.measure();
+		fig3.measure();
 	}
 }
